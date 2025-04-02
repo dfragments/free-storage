@@ -1,0 +1,25 @@
+#Reduce log size to 100MB:
+
+sudo journalctl --vacuum-size=100M
+
+#Clear User Cache:
+
+rm -rf ~/.cache/*
+
+
+#Clear System Temporary Files:
+
+sudo rm -rf /tmp/*
+sudo rm -rf /var/tmp/*
+
+
+
+#Check for large files in your home directory:
+
+du -ah ~/ | sort -rh | head -n 20
+
+                    OR
+
+
+
+sudo journalctl --vacuum-size=100M && rm -rf ~/.cache/* && sudo rm -rf /tmp/* && sudo rm -rf /var/tmp/*
